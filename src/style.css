@@ -1,0 +1,75 @@
+* {
+	box-sizing: border-box;
+	font-family: Robot, Arial, Helvetica, sans-serif;
+}
+body {
+	margin: 0;
+	padding: 0;
+
+	position: relative;
+}
+
+.header {
+	/*style*/
+	background: #4392F1;
+	color: #ffffff;
+	font-weight: bold;
+
+	/*box*/
+
+	min-height: 600px;
+}
+
+.header .headline {
+	/*pos*/
+	position: absolute;
+	right: 200px;
+	top: 100px;
+
+	/*style*/
+	text-align: right;
+	
+}
+
+.header .name {
+	/*style*/
+	font-size: 24pt;
+}
+
+.header .pos {
+
+}
+
+.header .pos-detail {
+	display: inline-block;
+
+	/*style*/
+	font-size: 36pt; 
+
+
+	background: linear-gradient(to top, rgba(0,0,0,0) 20%, #FDE74C 20%, #FDE74C 35%, rgba(0,0,0,0) 35%);
+
+
+}
+
+.header .pos-detail:not(:last-child) {
+	/*box*/
+	margin-right: 16px;
+}
+
+@keyframes emphasize {
+	from {
+		background: linear-gradient(to top, rgba(0,0,0,0) 20%, #FDE74C 20%, #FDE74C 35%, rgba(0,0,0,0) 35%);
+	}
+
+	to {
+		background: #FDE74C;
+	}
+}
+
+.header .pos-detail:hover {
+	animation-name: emphasize;
+	animation-duration: 0.8s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+}
