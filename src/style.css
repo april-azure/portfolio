@@ -11,7 +11,7 @@ body {
 
 .header {
 	/*style*/
-	background: #4392F1;
+	background: #669FBA;
 	color: #ffffff;
 	font-weight: bold;
 
@@ -28,10 +28,10 @@ body {
 
 	/*style*/
 	text-align: right;
-	
+	border-style: 10px solid white;
 }
 
-.header .name {
+.header .name, .header .pos-concat  {
 	/*style*/
 	font-size: 24pt;
 }
@@ -40,30 +40,31 @@ body {
 
 }
 
-.header .pos-detail {
-	display: inline-block;
-
-	/*style*/
-	font-size: 36pt; 
-
-
-	background: linear-gradient(to top, rgba(0,0,0,0) 20%, #FDE74C 20%, #FDE74C 35%, rgba(0,0,0,0) 35%);
-
-
+.pos-detail {
+	padding: 5px 10px;
 }
 
-.header .pos-detail:not(:last-child) {
-	/*box*/
-	margin-right: 16px;
+.pos-concat {
+	padding: 0;
+}
+
+.header .pos-detail{
+	/*style*/
+	font-size: 36pt; 
+}
+
+.header .pos-detail {
+	display: inline-block;
+	background: linear-gradient(to top, rgba(0,0,0,0) 20%, #ED7D86 20%, #ED7D86 35%, rgba(0,0,0,0) 35%);
 }
 
 @keyframes emphasize {
 	from {
-		background: linear-gradient(to top, rgba(0,0,0,0) 20%, #FDE74C 20%, #FDE74C 35%, rgba(0,0,0,0) 35%);
+		background: linear-gradient(to top, rgba(0,0,0,0) 20%, #ED7D86 20%, #ED7D86 35%, rgba(0,0,0,0) 35%);
 	}
 
 	to {
-		background: #FDE74C;
+		background: #ED7D86;
 	}
 }
 
