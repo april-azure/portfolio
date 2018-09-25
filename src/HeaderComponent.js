@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import * as Style from "./style.css"
+import {BrowserRouter as Router, Route, Link, NavLink} from "react-router-dom"
 
 class Header extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			fixed: false,
+			fixed: true,
 			oldScrollY: 0
 		};
 		this.scrollHandler = this.scrollHandler.bind(this);
@@ -49,11 +50,11 @@ class Header extends React.Component {
 			<div className = {headerStyle}>
 				<div className = {Style.container.concat(" ").concat(Style["grid-container"])}>
 					<nav className = {Style["page-nav"]}>
-						<a>Test</a>
+						<NavLink to ="/">Test</NavLink>
 						<span>/</span>
-						<a>Lorem</a>
+						<NavLink to = "/project">Lorem</NavLink>
 						<span>/</span>						
-						<a>Ipsum</a>
+						<NavLink to = "/contact">Ipsum</NavLink>
 					</nav>				
 					<div className = {Style.headline}>
 						<div className = {Style.name} >TEST TEST</div>

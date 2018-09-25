@@ -1,5 +1,6 @@
 :root {
 	--container-width: 60%;
+	--highlight:#ED7D86;
 }
 
 body {
@@ -169,7 +170,7 @@ body {
 
 	top: 35px;
 	border-radius: 5px;
-	background-color: #ED7D86;
+	background-color: var(--highlight);
 	z-index: -1;
 
 	transition: top 0.4s, height 0.4s;
@@ -263,7 +264,7 @@ body {
 	border-radius: 5px;
 	padding: 4px; 
 	display: inline-block;
-	background-color: #ED7D86;
+	background-color: var(--highlight);
 	color: white;
 }
 
@@ -284,4 +285,28 @@ body {
 
 .section .grid-content-header {
 	font-weight: bold;
+}
+
+/*project detail panel*/
+.detail-panel {
+
+}
+
+.detail-panel section {
+	width: 70%;
+	margin: auto;
+}
+
+.detail-panel h3 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 24px 0px;
+	color: var(--highlight);
+}
+
+.detail-panel p {
+	margin: 16px 0 48px 0;
+	text-indent: 2rem;
+	line-height: 1.5;
+	text-align: justify;
 }
