@@ -6,7 +6,7 @@ class Header extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			fixed: true,
+			fixed: false,
 			oldScrollY: 0
 		};
 		this.scrollHandler = this.scrollHandler.bind(this);
@@ -14,6 +14,10 @@ class Header extends React.Component {
 
 	componentWillMount() {
 		window.addEventListener('scroll', this.scrollHandler);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('scroll');
 	}
 
 	scrollHandler() {
@@ -43,7 +47,14 @@ class Header extends React.Component {
 
 		return (
 			<div className = {headerStyle}>
-				<div className = {Style.container}>
+				<div className = {Style.container.concat(" ").concat(Style["grid-container"])}>
+					<nav className = {Style["page-nav"]}>
+						<a>Test</a>
+						<span>/</span>
+						<a>Lorem</a>
+						<span>/</span>						
+						<a>Ipsum</a>
+					</nav>				
 					<div className = {Style.headline}>
 						<div className = {Style.name} >TEST TEST</div>
 						<div className = {Style.pos}>
